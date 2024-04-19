@@ -35,13 +35,8 @@ const Index = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      setSubmittedData(formData);
-      toast({
-        title: "Form submitted successfully.",
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-      });
+      // Redirect to ResultPage with state
+      navigate("/result", { state: formData });
     }
   };
 
